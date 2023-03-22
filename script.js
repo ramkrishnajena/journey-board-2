@@ -2,6 +2,11 @@ const title = document.getElementById("title");
 const taskDesc = document.getElementById("task_description");
 const taskBoxList = document.getElementById("task-list");
 const boxContent = document.getElementById("box-content");
+const notification = document.getElementById("notification");
+const notificatioNum = document.querySelector(".notification__count");
+const notificationList = document.querySelector(".notification-list");
+const closeNotification = document.getElementById("close");
+
 const url =
   "https://dev.deepthought.education/assets/uploads/files/files/others/ddugky_project.json";
 
@@ -94,6 +99,21 @@ const insertData = async () => {
   //   task__title and task__desc set
   taskDesc.innerHTML = taskTitle(taskHead);
   taskBoxList.innerHTML = taskThread(bodyData).join("");
+  let li = `<li>${taskHead.task_title}</li>`;
+  notification.addEventListener("click", () => {
+    notification.classList.add("notification-on");
+    notificatioNum.classList.add("none");
+    notificationList.innerHTML = `<ul class="notification-ul">${li}</ul>`;
+  });
+  for (const list of bodyData) {
+    li += `<li>${list.asset_title}</li>`;
+  }
+  console.log(closeNotification);
+  closeNotification.addEventListener("click", () => {
+    notification.classList.remove("notification-on");
+    notificatioNum.classList.remove("none");
+    notificationList.innerHTML = `<p id="notification__count">1</p>`;
+  });
 };
 insertData();
 
