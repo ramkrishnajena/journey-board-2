@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Journey Board</title>
+  </head>
+  <body>
+    <header>
+      <div class="header__logo">
+        <img
+          src="https://sdlms.deepthought.education/assets/uploads/files/system/site-logo.svg"
+          alt="journey Board"
+          id="logo"
+        />
+      </div>
+      <nav class="nav-bar">
+        <ul>
+          <li><img src="./assets/home.svg" alt="home" /></li>
+          <li><img src="./assets/setting.svg" alt="home" /></li>
+          <li><img src="./assets/bell.svg" alt="home" /></li>
+          <li><img src="./assets/profile.png" alt="home" /></li>
+          <li><img src="./assets/menu.svg" alt="home" /></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="container">
+      <div class="container-left">
+        <div class="left__head"></div>
+        <div class="left__body">
+          <div class="notification__count">
+            <p>1</p>
+          </div>
+        </div>
+      </div>
+      <div class="container-center">
+        <div class="center-head">
+          <p id="title"></p>
+          <button>Submit task</button>
+        </div>
+        <div class="center-desc" id="task_description"></div>
+        <div class="task-box-container" id="task-list"></div>
+      </div>
+      <div class="notice-board">
+        <div class="notice-board__btn">
+          <p><span>X</span>Notice Board</p>
+        </div>
+        <div class="notification-board_list"></div>
+      </div>
+      <div class="floating-icons">
+        <img src="./assets/question-float.svg" />
+        <img src="./assets/meeting.svg" />
+        <img src="./assets/calender.svg" />
+      </div>
+    </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
