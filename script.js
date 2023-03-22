@@ -2,7 +2,8 @@ const title = document.getElementById("title");
 const taskDesc = document.getElementById("task_description");
 const taskBoxList = document.getElementById("task-list");
 const boxContent = document.getElementById("box-content");
-let url;
+const url =
+  "https://dev.deepthought.education/assets/uploads/files/files/others/ddugky_project.json";
 
 const callAPi = async (url) => {
   try {
